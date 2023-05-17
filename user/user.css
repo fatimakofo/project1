@@ -154,7 +154,7 @@ div.services {
 div.services h3{
     color: #382660; 
 }
-div.services p{
+div.services span{
     font-weight: bolder;
     color: #382660;
     font-size: 20px;
@@ -310,17 +310,31 @@ div.content div p:nth-child(2) span:nth-child(1){
     color:  rgb(86, 82, 82);
 }
 div.content a{
-    text-align: center;
-    margin: auto;
+    margin-top: 20px;
     color: #382660;
     text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* div.content styling ends here */
 @media screen and (max-width: 768px) {
+    .side{
+       left: 0;
+    }
  div.sidenav{
-    display: none;
- }  
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    z-index: 1;
+ }
+ div.sidenav div.text header img{
+    width: 20%;
+ }
+ div.sidenav div.text header div{
+    display: inline-block;
+ }
  div.container{
     width: 100%;
  } 
@@ -332,7 +346,7 @@ width: 100%;
  div.container nav{
     display: none;
  }
- div.services p{
+ div.services span{
     line-height: 25px;
     display: block;
   }
@@ -348,4 +362,72 @@ width: 100%;
   div.services div.all div.one{
   width: 47%;
   }
+  div.content{
+    padding: 10px 0;
+    box-shadow: none;
+  }
+  hr{
+    display: none;
+  }
+  div.content div{
+    height: auto;
+  }
 }
+@media screen and (max-width:568px) {
+    div.container{
+        padding: 10px 10px;
+    }
+ /* div.services span{
+    line-height: 50px;
+ } */
+ div.airtime div.airtime-text div,
+ div.subscription div.sub-text div,
+ div.cable div.cable-text div{
+    width: 40%;
+ }
+ div.airtime div.airtime-text,
+div.sub-text,
+div.cable-text{
+     margin: auto;
+    width: 100%; 
+    padding: 0;
+    display: flex; 
+     flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+div.head2 img {
+    width: 60%;
+}
+}
+/* @media screen and (min-width:1024px) {
+ 
+div.content {
+        padding: 10px;
+        height: auto;
+}
+div.sidenav{
+    height: auto;
+}
+div.content div{
+    height: auto;
+}
+
+div.airtime div.airtime-text,
+ div.sub-text,
+  div.cable-text {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 35px;
+}
+
+} */
+
+

@@ -199,7 +199,18 @@ div.hero form button{
     div.hero form div{
         margin-top: 50px;
     }
+    div.header div:nth-child(1){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-@media screen (max-width:576px) {
-    
+
+@media screen and (max-width: 568px) {
+div.container nav{
+    width: 100%;
+}
+div.hero{
+    width: 100%;
+}
 }
